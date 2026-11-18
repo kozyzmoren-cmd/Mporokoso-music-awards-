@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MPOROKOSO MUSIC AWARDS 2027</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: #090d18;
+  color: white;
+}
+header {
+  background: #111a2c;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 2px solid #e8b923;
+}
+.logo {
+  color: #f5c542;
+  font-size: 25px;
+  font-weight: bold;
+}
+header p {
+  margin-top: 8px;
+  color: #ddd;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding: 15px;
+  background: #18243a;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.hero {
+  text-align: center;
+  padding: 65px 20px;
+  background: linear-gradient(140deg,#172d52,#080c18);
+}
+.hero h1 {
+  color: #f5c542;
+  font-size: 34px;
+  margin-bottom: 15px;
+}
+.hero p {
+  line-height: 1.7;
+  color: #ddd;
+}
+.btn {
+  display: inline-block;
+  background: #e8b923;
+  color: #111;
+  padding: 13px 24px;
+  border: none;
+  border-radius: 7px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 20px;
+  cursor: pointer;
+}
+section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+h2 {
+  text-align: center;
+  color: #f5c542;
+  margin-bottom: 25px;
+}
+.card {
+  background: #172238;
+  border: 1px solid #35435d;
+  padding: 22px;
+  border-radius: 12px;
+  margin-bottom: 18px;
+}
+.card h3 {
+  color: #f5c542;
+  margin-bottom: 12px;
+}
+input, select {
+  width: 100%;
+  padding: 14px;
+  margin: 9px 0;
+  border-radius: 6px;
+  border: none;
+  font-size: 16px;
+}
+.notice {
+  color: #f5c542;
+  font-size: 13px;
+  margin-top: 12px;
+  line-height: 1.5;
+}
+.category {
+  background: #172238;
+  padding: 17px;
+  border-radius: 8px;
+  margin: 10px 0;
+  border-left: 4px solid #e8b923;
+}
+footer {
+  background: #111a2c;
+  text-align: center;
+  padding: 25px;
+  color: #bbb;
+  line-height: 1.8;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">🏆 MPOROKOSO MUSIC AWARDS</div>
+  <p>Celebrating Zambian Music Talent</p>
+  <p>OFFICIAL AWARDS 2027</p>
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#categories">Categories</a>
+  <a href="#register">Register</a>
+  <a href="#vote">Vote</a>
+</nav>
+
+<div class="hero" id="home">
+  <h1>MPOROKOSO MUSIC AWARDS 2027</h1>
+  <p>One Nation. One Music Industry. One Celebration.</p>
+  <p>Recognising and celebrating musical talent across all Zambia.</p>
+  <a href="#register" class="btn">REGISTER TO VOTE</a>
+</div>
+
+<section id="about">
+  <h2>ABOUT THE AWARDS</h2>
+  <div class="card">
+    <h3>Welcome to MPOROKOSO MUSIC AWARDS</h3>
+    <p>
+      MPOROKOSO MUSIC AWARDS is a platform created
+      to recognise, appreciate and celebrate talented
+      musicians and contributors to the Zambian music industry.
+    </p>
+    <br>
+    <p><b>Awards Year:</b> 2027</p>
+    <p><b>Coverage:</b> All Zambia 🇿🇲</p>
+    <p><b>Platform Control:</b> Founder</p>
+  </div>
+</section>
+
+<section id="categories">
+  <h2>AWARDS CATEGORIES</h2>
+
+  <div class="category">🎤 Best Male Artist</div>
+  <div class="category">🎤 Best Female Artist</div>
+  <div class="category">🎵 Best New Artist</div>
+  <div class="category">🔥 Best Upcoming Artist</div>
+  <div class="category">🎧 Best Producer</div>
+  <div class="category">🎶 Best Song of the Year</div>
+  <div class="category">📹 Best Music Video</div>
+  <div class="category">🌟 Best Collaboration</div>
+  <div class="category">🏆 Artist of the Year</div>
+</section>
+
+<section id="register">
+  <h2>VOTER REGISTRATION</h2>
+  <div class="card">
+    <h3>Create Your Voter Account</h3>
+    <form id="registerForm">
+      <input type="text" placeholder="Choose username" required>
+      <input type="password" placeholder="Choose password" required>
+      <button class="btn" type="submit">CREATE ACCOUNT</button>
+    </form>
+    <p class="notice">
+      Registration is a demonstration only.
+      Secure account creation and voter verification
+      will be connected to the official backend later.
+      Do not enter real passwords here.
+    </p>
+  </div>
+</section>
+
+<section id="vote">
+  <h2>CAST YOUR VOTE</h2>
+  <div class="card">
+    <h3>2027 Music Awards Voting</h3>
+    <p>Voting will open when the official nominees
+    and secure voter verification system are ready.</p>
+    <button class="btn" onclick="alert('Official voting has not opened yet. Stay tuned!')">
+      VOTING COMING SOON
+    </button>
+  </div>
+</section>
+
+<footer>
+  <p>🏆 MPOROKOSO MUSIC AWARDS 2027</p>
+  <p>Celebrating Zambian Music 🇿🇲</p>
+  <p>Official Platform | Controlled by Founder</p>
+  <p>© 2027 MPOROKOSO MUSIC AWARDS</p>
+</footer>
+
+<script>
+document.getElementById("registerForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  alert("Thank you! The secure registration system is coming soon.");
+});
+</script>
+
+</body>
+  </html>
+  
