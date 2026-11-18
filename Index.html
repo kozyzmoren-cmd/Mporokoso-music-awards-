@@ -186,10 +186,8 @@ footer {
       <button class="btn" type="submit">CREATE ACCOUNT</button>
     </form>
     <p class="notice">
-      Registration is a demonstration only.
-      Secure account creation and voter verification
-      will be connected to the official backend later.
-      Do not enter real passwords here.
+      Secure voter registration is being prepared.
+      Do not enter real passwords until registration is connected.
     </p>
   </div>
 </section>
@@ -213,13 +211,26 @@ footer {
   <p>© 2027 MPOROKOSO MUSIC AWARDS</p>
 </footer>
 
-<script>
-document.getElementById("registerForm").addEventListener("submit", function(e) {
-  e.preventDefault();
-  alert("Thank you! The secure registration system is coming soon.");
-});
+<!-- SUPABASE CONNECTION -->
+<script type="module">
+import { createClient } from
+'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm';
+
+const SUPABASE_URL =
+'https://plqyyylhhrsztsfihzmp.supabase.co';
+
+const SUPABASE_ANON_KEY =
+'sb_publishable_ZT4Fi6QkLIbKv8ALKaCC1Q_a5RyRLQc';
+
+const supabase = createClient(
+  SUPABASE_URL,
+  SUPABASE_ANON_KEY
+);
+
+window.supabase = supabase;
+
+console.log('MPOROKOSO MUSIC AWARDS Supabase initialized!');
 </script>
 
 </body>
-  </html>
-  
+</html>
