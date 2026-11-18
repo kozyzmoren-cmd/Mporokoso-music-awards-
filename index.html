@@ -76,5 +76,44 @@ footer{background:#181818;text-align:center;padding:25px;color:#bbb}
 <p>Founder: Kozy ZM</p>
 </footer>
 
+<section id="artist-invitations" style="padding:25px;background:#151515;color:white;text-align:center;">
+  <h2>ARTIST INVITATIONS 2027</h2>
+  <p>Join MPOROKOSO MUSIC AWARDS 2027</p>
+
+  <form id="inviteArtistForm">
+    <input id="artistName" type="text" placeholder="Artist Name" required style="padding:12px;width:90%;margin:8px;">
+    <input id="artistEmail" type="email" placeholder="Artist Email" style="padding:12px;width:90%;margin:8px;">
+    <input id="artistPhone" type="tel" placeholder="Artist Phone Number" required style="padding:12px;width:90%;margin:8px;">
+    <button type="submit" style="padding:14px 25px;background:gold;color:black;border:0;font-weight:bold;">
+      SEND INVITATION
+    </button>
+  </form>
+  <p id="inviteMessage"></p>
+</section>
+
+<script>
+document.getElementById("inviteArtistForm").addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById("artistName").value.trim();
+  const email = document.getElementById("artistEmail").value.trim();
+  const phone = document.getElementById("artistPhone").value.trim();
+  const message = document.getElementById("inviteMessage");
+
+  message.textContent = "Sending invitation...";
+
+  const { error } = await supabase
+    .from("artist_invitations")
+    .insert([{ artist_name: name, artist_email: email || null, artist_phone: phone }]);
+
+  if (error) {
+    message.textContent = "Invitation failed: " + error.message;
+  } else {
+    message.textContent = "Invitation saved successfully!";
+    this.reset();
+  }
+});
+</script>
+  
 </body>
 </html>
